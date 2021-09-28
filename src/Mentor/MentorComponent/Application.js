@@ -7,7 +7,8 @@ const ApplicationDevop = () => {
   return (
     <div className="mentorList">
       <h1>APP DEVELOPMENT</h1>
-      <div class="row justify-content-md-center">
+      <div class="row justify-content-sm-center
+">
         {mentorList.map(
           (mentor) =>
             mentor.Interest.Web && (

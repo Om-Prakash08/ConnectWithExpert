@@ -129,7 +129,7 @@ form .icon {
 
 @media only screen and (max-width: 990px) {
   .Home .description,.form {
-    max-width:30rem !important ;
+    max-width:24rem !important ;
     margin:1.4rem auto  ;
   }
   .Home .description{
@@ -143,9 +143,16 @@ form .icon {
   .Home .description h5{
     color: #0f0f0f;
   }
+  .Home .btn.btn-primary{
+    padding: 0 35%;
+  }
+  .Home .form h1{
+    font-size:2rem ;
+    margin-bottom :1.5rem !important;
+  }
 }
 @media only screen and (max-width: 1300px)and (min-width:972px) {
   .Home .btn.btn-primary{
-    padding: 0 40%;
+    padding: 0 30%;
   }
 }

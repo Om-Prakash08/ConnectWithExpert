@@ -8,7 +8,7 @@ const WebDev = () => {
   return (
     <div className="mentorList">
       <h1>WEB DEVELOPMENT</h1>
-      <div class="row justify-content-md-center">
+      <div class="row justify-content-sm-center">
         {mentorList.map(
           (mentor) =>
             mentor.Interest.Web && (

@@ -4,7 +4,7 @@ import './Card.css' ;
 const Card = (props) => {
   const {imgSrc,name,description}=props; 
   return (
-    <div class="col-lg-3 col-md-4 col-sm-6 ">
+    <div class="col-lg-3 col-sm-4 col-6">
       <div className="cards  ">
         <div className="image">
           <img src={imgSrc} alt="" />
@@ -17,7 +17,7 @@ const Card = (props) => {
           <button> Read more...</button>
         </div>
       </div>
-    </div>
+    </div>         
   );
 };
 export default Card;
