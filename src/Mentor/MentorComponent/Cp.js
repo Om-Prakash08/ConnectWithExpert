@@ -7,12 +7,13 @@ const CompetitiveProgramming = () => {
   return (
     <div className="mentorList">
     <h1>COMPETITIVE PROGRAMMING</h1>
-    <div class="row justify-content-center
+    <div className="row justify-content-center
 ">
       {mentorList.map(
         (mentor) =>
           mentor.Interest.Cp && (
-            <Card
+            <Card 
+                key={mentor.id}
                 imgSrc={girl}
                 name={mentor.name}
                 description={mentor.description}

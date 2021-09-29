@@ -8,11 +8,12 @@ const WebDev = () => {
   return (
     <div className="mentorList">
       <h1>WEB DEVELOPMENT</h1>
-      <div class="row justify-content-center">
+      <div className="row justify-content-center">
         {mentorList.map(
           (mentor) =>
             mentor.Interest.Web && (
               <Card
+                key={mentor.id}
                 imgSrc={girl}
                 name={mentor.name}
                 description={mentor.description}
