@@ -7,11 +7,11 @@ const ApplicationDevop = () => {
   return (
     <div className="mentorList">
       <h1>APP DEVELOPMENT</h1>
-      <div class="row justify-content-sm-center
+      <div class="row justify-content-center
 ">
         {mentorList.map(
           (mentor) =>
-            mentor.Interest.Web && (
+            mentor.Interest.App && (
               <Card
                 imgSrc={girl}
                 name={mentor.name}

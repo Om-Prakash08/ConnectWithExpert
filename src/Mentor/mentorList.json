@@ -20,7 +20,7 @@
         "description": "Hello I am Leanne Graham",
         "phone": "8127392352",
         "Interest":{
-            "Web":true ,
+            "Web":false ,
             "App":true ,
             "Ml":true ,
             "Dl":true ,

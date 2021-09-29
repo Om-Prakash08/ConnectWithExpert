@@ -7,11 +7,11 @@ const MachineLearning = () => {
   return (
     <div className="mentorList">
       <h1>MACHINE LEARNING</h1>
-      <div class="row justify-content-sm-center
+      <div class="row justify-content-center
 ">
         {mentorList.map(
           (mentor) =>
-            mentor.Interest.Web && (
+            mentor.Interest.Ml && (
               <Card
                 imgSrc={girl}
                 name={mentor.name}

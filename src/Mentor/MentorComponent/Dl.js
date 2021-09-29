@@ -7,11 +7,11 @@ const DeepLearning = () => {
   return (
     <div className="mentorList">
       <h1>DEEP LEARNING</h1>
-      <div class="row justify-content-sm-center
+      <div class="row justify-content-center
 ">
         {mentorList.map(
           (mentor) =>
-            mentor.Interest.Web && (
+            mentor.Interest.Dl && (
               <Card
                 imgSrc={girl}
                 name={mentor.name}
