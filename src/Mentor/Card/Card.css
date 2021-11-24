@@ -4,6 +4,10 @@
   margin: 8%;
   min-width: 6rem;
   box-shadow: 2px 2px 10px black;
+  transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+}
+.cards:hover{
+  transform: scale(1.13);
 }
 .cards .image img {
   width: 100%;
@@ -19,8 +23,8 @@
   padding:1%;
 }
 .cards button {
-  margin-top: 2%;
-  margin-bottom:5%;
+  margin: 2% auto 5% auto;
+  width:fit-content ;
   background-color: lightblue;
   border: 1px solid black;
   padding:0.5% 2%;

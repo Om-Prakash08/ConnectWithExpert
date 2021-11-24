@@ -5,7 +5,7 @@ import Card from '../Card/Card' ;
 
 const ApplicationDevop = () => {
   return (
-    <div className="mentorList">
+    <div className="mentorList app">
       <h1>APP DEVELOPMENT</h1>
       <div className="row justify-content-center
 ">
