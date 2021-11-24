@@ -3,6 +3,7 @@ import Home from "./Home/Home.js";
 import Mentor from "./Mentor/Mentor";
 import Feedback from "./Feedback/Feedback";
 import Contact from "./Contact/Contact";
+import Success from "./ContactStatus/Success/Success.js" ;
 import {
   BrowserRouter as Router,
   Route,
@@ -50,8 +51,11 @@ function App() {
           <Route path="/mentor" exact>
             <Mentor interest={Interest} />
           </Route>
-          <Route path="/contact">
+          <Route path="/contact" exact>
             <Contact loginData={loginData} />
+          </Route>
+          <Route path="/contact/success" exact>
+            <Success />
           </Route>
           <Route path="/feedback">
             <Feedback loginData={loginData} />

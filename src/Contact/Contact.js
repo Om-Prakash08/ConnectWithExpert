@@ -1,6 +1,13 @@
-import "./Contact.css" ;
+import "./Contact.css";
+import { useHistory } from "react-router-dom";
 
 const Contact = () => {
+  let history = useHistory();
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(history) ;
+    history.push("/contact/success");
+  };
   return (
     <div className="contact">
       <div class="container">
@@ -8,9 +15,10 @@ const Contact = () => {
         <div class="brand-title">Contact Me</div>
         <div class="inputs">
           <form
-            action="mailto:omprakash.eee18@itbhu.ac.in"
-            method="POST"
-            enctype="text/plain"
+            // action="mailto:omprakash.eee18@itbhu.ac.in"
+            // method="POST"
+            // enctype="text/plain"
+            onSubmit={handleSubmit}
           >
             <label>EMAIL</label>
             <input type="email" placeholder="example@gmail.com" />
@@ -25,7 +33,7 @@ const Contact = () => {
               rows="10"
               placeholder="message"
             ></textarea>
-            <button type="submit" style={{fontSize:"large"}}>
+            <button type="submit" style={{ fontSize: "large" }}>
               SUBMIT
             </button>
           </form>
