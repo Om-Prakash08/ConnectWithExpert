@@ -15,10 +15,11 @@
     },
     {
         "id": 2,
-        "name": "Leanne Graham",
+        "name": "Om Prakash",
         "email": "Sincere@april.biz",
-        "description": "Hello I am Leanne Graham",
-        "phone": "8127392352",
+        "description": "Hello I am Om Prakash",
+        "phone": "9990407829",
+        "imgSrc":"OmPrakash.jpeg",
         "Interest":{
             "Web":false ,
             "App":true ,
@@ -33,6 +34,7 @@
         "email": "Sincere@april.biz",
         "description": "Hello I am Leanne Graham",
         "phone": "8127392352",
+        "imgSrc":"",
         "Interest":{
             "Web":true ,
             "App":true ,
@@ -47,6 +49,7 @@
         "email": "Sincere@april.biz",
         "description": "Hello I am Leanne Graham",
         "phone": "8127392352",
+        "imgSrc":"",
         "Interest":{
             "Web":true ,
             "App":true ,
@@ -61,6 +64,7 @@
         "email": "Sincere@april.biz",
         "description": "Hello I am Leanne Graham",
         "phone": "8127392352",
+        "imgSrc":"",
         "Interest":{
             "Web":true ,
             "App":true ,

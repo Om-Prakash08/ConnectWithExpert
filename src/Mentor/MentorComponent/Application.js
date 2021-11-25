@@ -1,9 +1,8 @@
-// import boy from "../Card/card_img2.jpeg";
-import girl from "../Card/card_img1.jpeg";
 import mentorList from '../mentorList.json' ;
 import Card from '../Card/Card' ;
 
 const ApplicationDevop = () => {
+ 
   return (
     <div className="mentorList app">
       <h1>APP DEVELOPMENT</h1>
@@ -14,9 +13,11 @@ const ApplicationDevop = () => {
             mentor.Interest.App && (
               <Card
                 key={mentor.id}
-                imgSrc={girl}
+                id={mentor.id}
+                imgSrc={mentor.imgSrc}
                 name={mentor.name}
                 description={mentor.description}
+               
               />
             )
         )}

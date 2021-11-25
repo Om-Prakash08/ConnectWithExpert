@@ -38,6 +38,10 @@
   border-radius: 50%;
   box-sizing: border-box;
   box-shadow: 7px 7px 10px #cbced1, -7px -7px 10px white;
+  overflow:hidden ;
+}
+.contact .brand-logo img{
+    height:98%  ;
 }
 
 .contact .brand-title {

@@ -21,7 +21,7 @@
 .cards .description {
   text-align: center;
   padding:1%;
-  height:50px ;
+  min-height:50px ;
 }
 .cards button {
   margin: 2% auto 5% auto;
@@ -46,7 +46,10 @@
 
 @media screen and (max-width: 1000px) {
   .cards .description {
-    height:100px ;
+    min-height:75px ;
+  }
+  .cards button{
+    margin-top:15px ;
   }
 }
 

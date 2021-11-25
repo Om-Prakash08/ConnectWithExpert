@@ -4,12 +4,13 @@ import {Link,useHistory} from "react-router-dom" ;
 
 
 const Card = (props) => {
-  const { imgSrc, name, description } = props;
+  const { id,imgSrc, name, description } = props;
   const [hoverStatus, sethoverStatus] = useState(false);
   let history = useHistory();
   const handleConnect = (event) => {
     event.preventDefault();
     history.push("/contact");
+    localStorage.setItem("mentorId", JSON.stringify(id));
   };
   const handleMouseOver =()=>{
     sethoverStatus(true);
@@ -23,7 +24,7 @@ const Card = (props) => {
     <div className="col-lg-3 col-sm-4 col-6" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
       <div className="cards" onClick={handleConnect}>
         <div className="image" >
-          <img src={imgSrc} alt="" />
+          <img src={"MentorImage/"+ imgSrc} alt="MentorImage" />
         </div>
         <div className="title">
           <h2>{name}</h2>

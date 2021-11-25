@@ -1,5 +1,4 @@
 // import boy from "../Card/card_img2.jpeg";
-import girl from "../Card/card_img1.jpeg";
 import mentorList from "../mentorList.json";
 import Card from "../Card/Card";
 
@@ -14,7 +13,8 @@ const WebDev = () => {
             mentor.Interest.Web && (
               <Card
                 key={mentor.id}
-                imgSrc={girl}
+                id={mentor.id}
+                imgSrc={mentor.imgSrc}
                 name={mentor.name}
                 description={mentor.description}
               />

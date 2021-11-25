@@ -21,7 +21,6 @@ function Home(props) {
     event.preventDefault();
     localStorage.setItem("userData", JSON.stringify(loginData));
     localStorage.setItem("Interest", JSON.stringify(Interest));
-    console.log(history) ;
     history.push("/mentor");
   };
 
