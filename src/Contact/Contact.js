@@ -1,7 +1,8 @@
 import "./Contact.css";
 import { useHistory } from "react-router-dom";
 
-const Contact = () => {
+const Contact = (props) => {
+  const { imgSrc, name, phone } = props;
   let history = useHistory();
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -21,9 +22,9 @@ const Contact = () => {
             onSubmit={handleSubmit}
           >
             <label>EMAIL</label>
-            <input type="email" placeholder="example@gmail.com" />
+            <input type="email" placeholder="example@gmail.com" required />
             <label>NAME</label>
-            <input type="Name" placeholder="name" />
+            <input type="Name" placeholder="name" required/>
             <label>YOUR MESSAGE</label>
             <textarea
               name=""
@@ -32,6 +33,7 @@ const Contact = () => {
               cols="30"
               rows="10"
               placeholder="message"
+              required
             ></textarea>
             <button type="submit" style={{ fontSize: "large" }}>
               SUBMIT

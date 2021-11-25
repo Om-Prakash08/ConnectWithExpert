@@ -7,7 +7,7 @@
   transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
 }
 .cards:hover{
-  transform: scale(1.13);
+  transform: scale(1.15);
 }
 .cards .image img {
   width: 100%;
@@ -21,18 +21,32 @@
 .cards .description {
   text-align: center;
   padding:1%;
+  height:50px ;
 }
 .cards button {
   margin: 2% auto 5% auto;
   width:fit-content ;
   background-color: lightblue;
   border: 1px solid black;
-  padding:0.5% 2%;
+  padding:0.5% 5%;
   border-radius: 5px;
   cursor: pointer;
 }
+.cards button a{
+  color:black !important ;
+}
+.cards button a:hover{
+  color:white !important ;
+}
 .cards button:hover {
   background-color: black;
-  color: white;
+  color: white !important;
   transition: 0.5s;
 }
+
+@media screen and (max-width: 1000px) {
+  .cards .description {
+    height:100px ;
+  }
+}
+
