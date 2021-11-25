@@ -1,9 +1,10 @@
 import "./Success.css";
-
+import Menu from '../../menu/menu'
 
 const Success = () => {
   return (
     <div className="success">
+    <Menu />
      <div id="container">
       <div id="success-box">
         <div class="face">

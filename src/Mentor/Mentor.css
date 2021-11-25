@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Estonia&display=swap');
+.mentor{
+    margin-top:25px ;
+}
 .mentorList{
     text-align:center ;
     align-items:center ;
