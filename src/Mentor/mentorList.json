@@ -1,12 +1,12 @@
 [   {
       "id": 1,
-      "name": "Leanne Graham",
-      "email": "Sincere@april.biz",
-      "description": "Hello I am Leanne Graham",
-      "phone": "8127392351",
-      "imgSrc":"girl.jpeg",
+      "name": "Puran Mal Jaluthariya",
+      "email": "pmjaluthariya.eee18@itbhu.ac.in",
+      "description": "Hello I am Puran",
+      "phone": "7375823861",
+      "imgSrc":"Puran.jpeg",
       "Interest":{
-          "Web":false ,
+          "Web":true ,
           "App":true ,
           "Ml":true ,
           "Dl":true ,
@@ -21,8 +21,8 @@
         "phone": "8127392352",
         "imgSrc":"OmPrakash.jpeg",
         "Interest":{
-            "Web":false ,
-            "App":true ,
+            "Web":true ,
+            "App":false ,
             "Ml":true ,
             "Dl":true ,
             "Cp":true 
