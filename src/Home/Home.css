@@ -2,14 +2,8 @@
 padding:0 ;
 margin:0 ;
 }
-/* body {
-  background-image: url("priscilla-unsplash.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover ;
-  background-position: center; 
-  overflow: scroll ;
-} */
+
+
 .Home{
   background-image: url("priscilla-unsplash.jpg");
   background-repeat: no-repeat;
@@ -28,10 +22,27 @@ margin:0 ;
   padding-left:1rem ;
   backdrop-filter: blur(4px);
 }
-.Home .description h5{
-  font-size: 1.4rem;
-  color: rgb(87, 85, 85) ;
-  line-height: 2.4rem ; 
+.Home .description h2{
+  color: #ffffff ;
+  letter-spacing:4.5px ;
+  font-size: 3rem !important;
+  font-weight: 500;
+  font-family: 'Flamenco', cursive;
+}
+.Home .description h3{
+  letter-spacing:4.5px ;
+  font-weight: 700;
+  font-family: 'Flamenco', cursive;
+  margin-top: 13px;
+}
+
+.colorchange{
+  animation: om 1.4s infinite;
+}
+@keyframes om {
+    0%{color: red }
+    33%{color: #bf55ec }
+    87%{color:white}
 }
 .Home .description h1{
  color: #fff ;
@@ -150,6 +161,11 @@ form .icon {
     font-size:2rem ;
     margin-bottom :1.5rem !important;
   }
+  .Home .description h2{
+     font-size: 2.5rem !important;
+  } .Home .description h3{
+    font-size: 2.0rem !important;
+ }
 }
 @media only screen and (max-width: 1300px)and (min-width:972px) {
   .Home .btn.btn-primary{

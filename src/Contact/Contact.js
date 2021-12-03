@@ -4,14 +4,13 @@ import { useHistory } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Menu from "../menu/menu.js";
 import axios from "axios";
-import Backdrop from '@mui/material/Backdrop';
-import CircularProgress from '@mui/material/CircularProgress';
-
+import Backdrop from "@mui/material/Backdrop";
+import CircularProgress from "@mui/material/CircularProgress";
 
 const Contact = (props) => {
   const { loginData } = props;
   const [email, setEmail] = useState();
-  const [open,setOpen]=useState(false) ;
+  const [open, setOpen] = useState(false);
   const [Subject, setSubject] = useState("Regarding for contact");
   const [Message, setMessage] = useState();
   const [mentorId, setMentorId] = useState(1);
@@ -41,7 +40,7 @@ const Contact = (props) => {
 
   let history = useHistory();
   const handleSubmit = (event) => {
-    setOpen(true) ;
+    setOpen(true);
     event.preventDefault();
     axios
       .post("https://connectwithexpert.herokuapp.com/", {
@@ -61,7 +60,7 @@ const Contact = (props) => {
         } else {
           history.push("/contact/failure");
         }
-        setOpen(false) ;
+        setOpen(false);
       })
       .catch(function (error) {
         history.push("/contact/failure");
@@ -80,9 +79,9 @@ const Contact = (props) => {
   };
   return (
     <div>
-      <Menu />
+      <Menu DialogColor="DialogColorPrimary" buttonColor="primary" />
       <Backdrop
-        sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
+        sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
         open={open}
       >
         <CircularProgress size={54} thickness={4} color="primary" />

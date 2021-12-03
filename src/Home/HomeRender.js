@@ -2,6 +2,7 @@ import React from "react";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
+
 const LoginForm = (props) => {
   const { loginData, Interest, handleSubmit, updateLoginData, updateInterest } =
     props;
@@ -129,7 +130,7 @@ const LoginForm = (props) => {
       </div>
       <div className="text-center">
         <button type="submit" className="btn btn-primary" tabIndex="-1">
-          SUBMIT
+          SUBMIT 
         </button>
       </div>
     </form>

@@ -3,8 +3,9 @@ import "./Home.css";
 import LoginForm from "./HomeRender";
 import { useHistory } from "react-router-dom";
 
+
 function Home(props) {
-  const {onChangeLogin,onChangeInterest,Interest,loginData}=props ;
+  const { onChangeLogin, onChangeInterest, Interest, loginData } = props;
   const updateLoginData = (event) =>
     onChangeLogin({
       ...loginData,
@@ -26,28 +27,28 @@ function Home(props) {
 
   return (
     <div className="Home">
-    <div className="containt">
-      <div className="row">
-        <div className="col-lg-1"></div>
-        <div className="col-lg-3 description">
-          <h1>Hey Buddy</h1>
-          <h5>
-            Welcome to the Senior junior interaction app. Fill out the form to
-            contact your interest specialist.
-          </h5>
-        </div>
-        <div className="col-lg-3"></div>
-        <div className="col-lg-4 form">
-          <LoginForm
-            loginData={loginData}
-            Interest={Interest}
-            handleSubmit={handleSubmit}
-            updateLoginData={updateLoginData}
-            updateInterest={updateInterest}
-          />
+      <div className="containt">
+        <div className="row">
+          <div className="col-lg-1"></div>
+          <div className="col-lg-4 description">
+            <h2>
+              WELCOME TO SENIOR JUNIOR{" "}
+              <span class="colorchange">INTERACTION APP.</span>
+            </h2>
+            <h3>Fill out the form to contact your interest specialist.</h3>
+          </div>
+          <div className="col-lg-2"></div>
+          <div className="col-lg-4 form">
+            <LoginForm
+              loginData={loginData}
+              Interest={Interest}
+              handleSubmit={handleSubmit}
+              updateLoginData={updateLoginData}
+              updateInterest={updateInterest}
+            />
+          </div>
         </div>
       </div>
-    </div>
     </div>
   );
 }

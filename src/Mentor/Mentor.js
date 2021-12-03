@@ -13,7 +13,10 @@ const Mentor = (props) => {
   // console.log("Card",interest) ;
   return (
     <div className="mentor">
-      <Menu />
+      <Menu 
+      DialogColor="DialogColorSuccess"
+      buttonColor="success"
+    />
       {Web && <WebDev />}
       {Cp && <CompetitiveProgramming />}
       {Ml && <MachineLearning />}

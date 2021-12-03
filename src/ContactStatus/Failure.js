@@ -3,7 +3,10 @@ import Menu from '../menu/menu'
 const Success = () => {
   return (
     <div className="success">
-    <Menu />
+    <Menu 
+      DialogColor="DialogColorFail"
+      buttonColor="warning"
+    />
      
 
     <div id="container">
