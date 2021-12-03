@@ -6,7 +6,7 @@ import Menu from "../menu/menu.js";
 import axios from "axios";
 import Backdrop from '@mui/material/Backdrop';
 import CircularProgress from '@mui/material/CircularProgress';
-import 'dotenv' ;
+
 
 const Contact = (props) => {
   const { loginData } = props;
@@ -41,11 +41,10 @@ const Contact = (props) => {
 
   let history = useHistory();
   const handleSubmit = (event) => {
-    console.log(process.env.sendMailApi) ;
     setOpen(true) ;
     event.preventDefault();
     axios
-      .post(process.env.sendMailApi, {
+      .post("https://connectwithexpert.herokuapp.com/", {
         from: "connectwithexpert21@gmail.com",
         to: selectedMentor.email,
         cc: "connectwithexpert21@gmail.com",
