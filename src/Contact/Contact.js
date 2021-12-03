@@ -43,7 +43,7 @@ const Contact = (props) => {
     setOpen(true);
     event.preventDefault();
     axios
-      .post("https://connectwithexpert.herokuapp.com/", {
+      .post("https://connectwithexpert-backend.herokuapp.com/sendMail", {
         from: "connectwithexpert21@gmail.com",
         to: selectedMentor.email,
         cc: "connectwithexpert21@gmail.com",
