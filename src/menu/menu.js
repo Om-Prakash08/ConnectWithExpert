@@ -67,7 +67,7 @@ export default function Menu() {
     <div className="menuDiv">
       <Button variant="contained" onClick={handleClickOpen} >
         Menu 
-        <img src="https://img.icons8.com/material-outlined/24/000000/menu--v1.png"/>
+        <img src="https://img.icons8.com/material-outlined/24/000000/menu--v1.png" alt="icon"/>
       </Button>
       <SimpleDialog
         className={SimpleDialog}

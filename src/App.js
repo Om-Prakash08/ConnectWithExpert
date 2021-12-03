@@ -4,6 +4,7 @@ import Mentor from "./Mentor/Mentor";
 import Feedback from "./Feedback/Feedback";
 import Contact from "./Contact/Contact";
 import Success from "./ContactStatus/Success/Success.js" ;
+import Failure from "./ContactStatus/Failure.js" ;
 import {
   BrowserRouter as Router,
   Route,
@@ -58,6 +59,9 @@ function App() {
           </Route>
           <Route path="/contact/success" exact>
             <Success />
+          </Route>
+          <Route path="/contact/failure" exact>
+            <Failure />
           </Route>
           <Route path="/feedback">
             <Feedback loginData={loginData} />

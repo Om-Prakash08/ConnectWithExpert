@@ -3,15 +3,19 @@ import mentorList from "../Mentor/mentorList.json";
 import { useHistory } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Menu from "../menu/menu.js";
+import axios from "axios";
+import Backdrop from '@mui/material/Backdrop';
+import CircularProgress from '@mui/material/CircularProgress';
 
 const Contact = (props) => {
   const { loginData } = props;
   const [email, setEmail] = useState();
-  const [name, setName] = useState();
+  const [open,setOpen]=useState(false) ;
+  const [Subject, setSubject] = useState("Regarding for contact");
+  const [Message, setMessage] = useState();
   const [mentorId, setMentorId] = useState(1);
   useEffect(() => {
     setEmail(loginData.Email);
-    setName(loginData.Name);
   }, [loginData]);
 
   let data = JSON.parse(localStorage.getItem("mentorId"));
@@ -36,29 +40,62 @@ const Contact = (props) => {
 
   let history = useHistory();
   const handleSubmit = (event) => {
+    setOpen(true) ;
     event.preventDefault();
-    history.push("/contact/success");
+    axios
+      .post("http://localhost:3001/sendMail", {
+        from: "connectwithexpert21@gmail.com",
+        to: selectedMentor.email,
+        cc: "connectwithexpert21@gmail.com",
+        subject: Subject,
+        message: Message,
+        Name: loginData.Name,
+        Branch: loginData.Branch,
+        Roll: loginData.RollNumber,
+        Email: email,
+      })
+      .then(function (response) {
+        if (response) {
+          history.push("/contact/success");
+        } else {
+          history.push("/contact/failure");
+        }
+        setOpen(false) ;
+      })
+      .catch(function (error) {
+        history.push("/contact/failure");
+        console.log(error);
+        setOpen(false);
+      });
   };
   const handelChangeEmail = (e) => {
     setEmail(e.target.value);
   };
-  const handelChangeName = (e) => {
-    console.log(e);
-    setName(e.target.value);
+  const handelChangeSubject = (e) => {
+    setSubject(e.target.value);
+  };
+  const handelChangeMessage = (e) => {
+    setMessage(e.target.value);
   };
   return (
     <div>
       <Menu />
+      <Backdrop
+        sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
+        open={open}
+      >
+        <CircularProgress size={54} thickness={4} color="primary" />
+      </Backdrop>
       <div className="contact">
-        <div class="container">
-          <div class="brand-logo">
+        <div className="container">
+          <div className="brand-logo">
             <img
               src={"MentorImage/" + selectedMentor.imgSrc}
               alt="MentorImage"
             />
           </div>
-          <div class="brand-title">{selectedMentor.name}</div>
-          <div class="inputs">
+          <div className="brand-title">{selectedMentor.name}</div>
+          <div className="inputs">
             <form onSubmit={handleSubmit}>
               <label>EMAIL</label>
               <input
@@ -68,12 +105,12 @@ const Contact = (props) => {
                 onChange={handelChangeEmail}
                 required
               />
-              <label>NAME</label>
+              <label>SUBJECT</label>
               <input
-                type="Name"
-                placeholder="name"
-                value={name}
-                onChange={handelChangeName}
+                type="Subject"
+                placeholder="Subject"
+                value={Subject}
+                onChange={handelChangeSubject}
                 required
               />
               <label>YOUR MESSAGE</label>
@@ -84,6 +121,8 @@ const Contact = (props) => {
                 cols="30"
                 rows="10"
                 placeholder="message"
+                value={Message}
+                onChange={handelChangeMessage}
                 required
               ></textarea>
               <button type="submit" style={{ fontSize: "large" }}>
@@ -94,12 +133,12 @@ const Contact = (props) => {
         </div>
         <a
           href={"https://wa.me/+91" + selectedMentor.phone}
-          class="whatsapp_float"
+          className="whatsapp_float"
           target="_blank"
           rel="noreferrer"
         >
           {" "}
-          <i class="fa fa-whatsapp whatsapp-icon"></i>
+          <i className="fa fa-whatsapp whatsapp-icon"></i>
         </a>
       </div>
     </div>
