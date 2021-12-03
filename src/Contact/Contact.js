@@ -6,6 +6,7 @@ import Menu from "../menu/menu.js";
 import axios from "axios";
 import Backdrop from '@mui/material/Backdrop';
 import CircularProgress from '@mui/material/CircularProgress';
+import 'dotenv' ;
 
 const Contact = (props) => {
   const { loginData } = props;
@@ -43,7 +44,7 @@ const Contact = (props) => {
     setOpen(true) ;
     event.preventDefault();
     axios
-      .post("http://localhost:3001/sendMail", {
+      .post(process.env.sendMailApi, {
         from: "connectwithexpert21@gmail.com",
         to: selectedMentor.email,
         cc: "connectwithexpert21@gmail.com",
