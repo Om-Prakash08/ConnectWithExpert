@@ -41,6 +41,7 @@ const Contact = (props) => {
 
   let history = useHistory();
   const handleSubmit = (event) => {
+    console.log(process.env.sendMailApi) ;
     setOpen(true) ;
     event.preventDefault();
     axios
