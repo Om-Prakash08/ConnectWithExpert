@@ -8,18 +8,18 @@ import { Link } from "react-router-dom";
 import "./menu.css";
 
 function SimpleDialog(props) {
-  const { onClose, selectedValue, open ,DialogColor} = props;
+  const { onClose, selectedValue, open, DialogColor } = props;
   const handleClose = () => {
     onClose(selectedValue);
   };
   return (
     <Dialog onClose={handleClose} open={open}>
-      <div className={"MenuDialog "+DialogColor}>
+      <div className={"MenuDialog " + DialogColor}>
         <h3>MENU</h3>
         <hr />
         <List sx={{ pt: 0 }}>
           <ListItem>
-            <button>
+            <button >
               <Link to="/" style={{ textDecoration: "none" }}>
                 Home
               </Link>
@@ -65,8 +65,15 @@ export default function Menu(props) {
 
   return (
     <div className="menuDiv">
-      <Button variant="contained" onClick={handleClickOpen} color={props.buttonColor} >
-        <img src="https://img.icons8.com/material-outlined/24/000000/menu--v1.png" alt="icon"/>
+      <Button
+        variant="contained"
+        onClick={handleClickOpen}
+        color={props.buttonColor}
+      >
+        <img
+          src="https://img.icons8.com/material-outlined/24/000000/menu--v1.png"
+          alt="icon"
+        />
         Menu
       </Button>
       <SimpleDialog
