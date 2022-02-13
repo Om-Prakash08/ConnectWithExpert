@@ -12,7 +12,7 @@ const Contact = (props) => {
   const [open, setOpen] = useState(false);
   const [Subject, setSubject] = useState("Regarding for contact");
   const [Message, setMessage] = useState();
-  const [mentorId, setMentorId] = useState(1);
+  const [mentorId, setMentorId] = useState(null);
   useEffect(() => {
     setEmail(loginData.Email);
   }, [loginData]);
@@ -21,8 +21,9 @@ const Contact = (props) => {
   useEffect(() => {
     if (data) {
       setMentorId(data);
-    } else if (!mentorId) {
-      setMentorId(null);
+    }
+    else {
+       setMentorId(null);
     } // eslint-disable-next-line
   }, [data]);
 
