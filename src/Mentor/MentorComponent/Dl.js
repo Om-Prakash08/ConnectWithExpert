@@ -1,8 +1,7 @@
-import mentorList from '../mentorList.json' ;
 import Card from '../Card/Card' ;
 
-const DeepLearning = () => {
-
+const DeepLearning = (props) => {
+  const {mentorList} = props ;
   return (
     <div className="mentorList">
       <h1>DEEP LEARNING</h1>
@@ -10,14 +9,13 @@ const DeepLearning = () => {
 ">
         {mentorList.map(
           (mentor) =>
-            mentor.Interest.Dl && (
+            mentor.interest.dl && (
               <Card
-                key={mentor.id}
-                id={mentor.id}
+                key={mentor._id}
+                id={mentor._id}
                 imgSrc={mentor.imgSrc}
                 name={mentor.name}
                 description={mentor.description}
-               
               />
             )
         )}

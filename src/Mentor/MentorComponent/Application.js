@@ -1,8 +1,7 @@
-import mentorList from '../mentorList.json' ;
 import Card from '../Card/Card' ;
 
-const ApplicationDevop = () => {
- 
+const ApplicationDevop = (props) => {
+  const {mentorList} = props ;
   return (
     <div className="mentorList app">
       <h1>APP DEVELOPMENT</h1>
@@ -10,14 +9,13 @@ const ApplicationDevop = () => {
 ">
         {mentorList.map(
           (mentor) =>
-            mentor.Interest.App && (
+            mentor.interest.app && (
               <Card
-                key={mentor.id}
-                id={mentor.id}
+                key={mentor._id}
+                id={mentor._id}
                 imgSrc={mentor.imgSrc}
                 name={mentor.name}
                 description={mentor.description}
-               
               />
             )
         )}

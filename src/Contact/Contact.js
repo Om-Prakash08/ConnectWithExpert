@@ -1,5 +1,4 @@
 import "./Contact.css";
-import mentorList from "../Mentor/mentorList.json";
 import { useHistory } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Menu from "../menu/menu.js";
@@ -23,20 +22,33 @@ const Contact = (props) => {
     if (data) {
       setMentorId(data);
     } else if (!mentorId) {
-      setMentorId(1);
+      setMentorId(null);
     } // eslint-disable-next-line
   }, [data]);
 
-  function filterById(jsonObject, id) {
-    return jsonObject.filter(function (jsonObject) {
-      return jsonObject["id"] === id;
-    })[0];
-  }
+  // function filterById(jsonObject, id) {
+  //   return jsonObject.filter(function (jsonObject) {
+  //     return jsonObject["id"] === id;
+  //   })[0];
+  // }
 
   const [selectedMentor, setSelectedMentor] = useState([]);
   useEffect(() => {
-    setSelectedMentor(filterById(mentorList, mentorId));
-  }, [mentorId, filterById]);
+    if (mentorId) {
+      axios({
+        method: "get",
+        url: `api/mentor/${mentorId}`,
+        baseURL: process.env.REACT_APP_BACKEND_URL,
+      })
+        .then((res) => {
+          setSelectedMentor(res.data.mentor);
+          //console.log(res.data.mentors) ;
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
+  }, [mentorId]);
 
   let history = useHistory();
   const handleSubmit = (event) => {
@@ -87,12 +99,9 @@ const Contact = (props) => {
         <CircularProgress size={54} thickness={4} color="primary" />
       </Backdrop>
       <div className="contact">
-        <div className="container">
+        <div className="container speciallyForContact">
           <div className="brand-logo">
-            <img
-              src={"MentorImage/" + selectedMentor.imgSrc}
-              alt="MentorImage"
-            />
+            <img src={selectedMentor.imgSrc} alt="MentorImage" />
           </div>
           <div className="brand-title">{selectedMentor.name}</div>
           <div className="inputs">

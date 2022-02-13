@@ -24,7 +24,7 @@ const Card = (props) => {
     <div className="col-lg-3 col-sm-4 col-6" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
       <div className="cards" onClick={handleConnect}>
         <div className="image" >
-          <img src={"MentorImage/"+ imgSrc} alt="MentorImage" />
+          <img src={imgSrc} alt="MentorImage" />
         </div>
         <div className="title">
           <h2>{name}</h2>

@@ -5,6 +5,7 @@ import Feedback from "./Feedback/Feedback";
 import Contact from "./Contact/Contact";
 import Success from "./ContactStatus/Success/Success.js" ;
 import Failure from "./ContactStatus/Failure.js" ;
+import RegisterMentor from "./Register_Mentor/register" ;
 import './App.css'
 import {
   BrowserRouter as Router,
@@ -66,6 +67,9 @@ function App() {
           </Route>
           <Route path="/feedback">
             <Feedback loginData={loginData} />
+          </Route>
+          <Route path="/mentor/register">
+            <RegisterMentor />
           </Route>
           <Redirect to="/" />
         </Switch>

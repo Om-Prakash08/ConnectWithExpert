@@ -1,9 +1,7 @@
-// import boy from "../Card/card_img2.jpeg";
-import mentorList from '../mentorList.json' ;
 import Card from '../Card/Card' ;
 
-const MachineLearning = () => {
- 
+const MachineLearning = (props) => {
+  const {mentorList} = props ;
   return (
     <div className="mentorList">
       <h1>MACHINE LEARNING</h1>
@@ -11,14 +9,13 @@ const MachineLearning = () => {
 ">
         {mentorList.map(
           (mentor) =>
-            mentor.Interest.Ml && (
+            mentor.interest.ml && (
               <Card
-                key={mentor.id}
-                id={mentor.id}
+                key={mentor._id}
+                id={mentor._id}
                 imgSrc={mentor.imgSrc}
                 name={mentor.name}
                 description={mentor.description}
-                
               />
             )
         )}

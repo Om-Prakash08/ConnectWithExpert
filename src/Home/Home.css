@@ -37,7 +37,7 @@ margin:0 ;
 }
 
 .colorchange{
-  animation: om 1.4s infinite;
+  animation: om 8s infinite;
 }
 @keyframes om {
     0%{color: red }

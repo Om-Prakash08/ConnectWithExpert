@@ -1,7 +1,8 @@
 
 /* Scrollbar Styling */
 ::-webkit-scrollbar {
-  max-width: 15px;
+  max-width: 10px;
+  max-height: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -12,8 +13,8 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
   background: rgb(0, 60, 128); 
 }
 
