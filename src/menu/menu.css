@@ -55,7 +55,7 @@
  /* padding: 0px auto ; */
 }
 .MenuDialog button a{
-  padding: 0 60px;
+  padding: 12px 60px;
 }
 .MenuDialog button:hover {
   background-color: white;
