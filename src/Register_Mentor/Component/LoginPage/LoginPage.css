@@ -12,3 +12,13 @@
 .LoginPage .container img{
   max-width: 550px;
 }
+
+@media (max-width: 1000px) {
+  .LoginPage .container{
+    max-width: 280px;
+    padding-top:40%;
+  }
+  .LoginPage .container img{
+    max-width: 280px;
+  }
+}
