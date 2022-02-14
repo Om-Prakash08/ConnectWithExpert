@@ -11,7 +11,7 @@ const LoginPage = (props) =>{
         <div className="LoginPage">
         <Menu DialogColor="DialogColorPrimary" buttonColor="primary" />
         <div className="container">
-        <img src={login_img}></img>
+        <img src={login_img} alt=""></img>
         {/* <h1>Login with Google</h1> */}
         <GoogleLogin
           clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
