@@ -43,7 +43,7 @@ const AuthForRegister = () => {
     setRegisterStatus(true);
   };
   return (
-    <div>
+    <div className="AuthforRegisterDiv">
       {!registerStatus && !loginStatus && (
         <LoginPage responseGoogle={responseGoogle} />
       )}

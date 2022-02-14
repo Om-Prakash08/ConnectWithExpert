@@ -37,6 +37,10 @@
     margin-bottom: 18px;
 }
 
+.AuthforRegisterDiv{
+    overflow:visible ;
+}
+
 
 
 @media (max-width: 1000px) {
@@ -44,7 +48,7 @@
       width: 80%;
       height: fit-content;
       min-width: 70px;
-      max-height: 1000px;
+      /* max-height: 1000px; */
       padding: 40px;
       margin:30px auto;
     }
