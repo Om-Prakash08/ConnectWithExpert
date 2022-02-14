@@ -53,6 +53,7 @@ const RegisterMentor = (props) => {
     axios({
       method: "post",
       url: "/1/upload",
+      baseURL:process.env.REACT_APP_IMGBB_URL,
       data: body,
     })
       .then(function (response) {
@@ -79,14 +80,14 @@ const RegisterMentor = (props) => {
             })
             .catch((error) => {
               setSubmitSuccessMessage(null);
-              setSubmitFailMessage("failed, Prease try again");
+              setSubmitFailMessage("failed, Possibly your are already mentor or Prease try again");
               console.log(error);
             });
         }
       })
       .catch(function (error) {
         setSubmitSuccessMessage(null);
-        setSubmitFailMessage("failed, Prease try again");
+        setSubmitFailMessage("failed, Possibly your are already mentor or Prease try again");
         console.log(error);
       });
     setOpen(false);
