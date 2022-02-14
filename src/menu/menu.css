@@ -16,7 +16,7 @@
 }
 
 .MenuDialog {
-  width: 250px;
+  width: 300px;
   height: fit-content;
   text-align: center;
   align-items: center;
@@ -31,6 +31,10 @@
 }
 .DialogColorFail{
   background-color: #69310c;
+}
+
+.DialogColorVoilet{
+  background-color: #050a64;
 }
 
 .MenuDialog h3 {
@@ -55,7 +59,10 @@
  /* padding: 0px auto ; */
 }
 .MenuDialog button a{
-  padding: 12px 60px;
+  padding: 12px 50px;
+}
+.MenuDialog .Become-mentor a{
+  padding:  0px !important;
 }
 .MenuDialog button:hover {
   background-color: white;

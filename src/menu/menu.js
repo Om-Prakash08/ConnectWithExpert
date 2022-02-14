@@ -42,6 +42,13 @@ function SimpleDialog(props) {
               </a>
             </button>
           </ListItem>
+          <ListItem>
+            <button className="Become-mentor">
+              <Link to="/mentor/register" style={{ textDecoration: "none" }}>
+                Become mentor
+              </Link>
+            </button>
+          </ListItem>
         </List>
       </div>
     </Dialog>

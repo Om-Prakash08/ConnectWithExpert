@@ -1,0 +1,14 @@
+.LoginPage{
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100vh !important;
+}
+.LoginPage .container{
+  max-width: 550px;
+  padding-top:8%;
+}
+.LoginPage .container img{
+  max-width: 550px;
+}

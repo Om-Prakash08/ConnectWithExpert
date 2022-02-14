@@ -6,8 +6,10 @@ import axios from "axios";
 import Backdrop from "@mui/material/Backdrop";
 import CircularProgress from "@mui/material/CircularProgress";
 import "./register.css";
+import Menu from "../../../menu/menu";
 
-const RegisterMentor = () => {
+const RegisterMentor = (props) => {
+  const {setRegisterStatus}=props ;
   const [open, setOpen] = useState(false);
   const [Interest, setInterest] = useState({
     web: false,
@@ -92,6 +94,7 @@ const RegisterMentor = () => {
 
   return (
     <div>
+       <Menu DialogColor="DialogColorPrimary" buttonColor="primary" />
       <Backdrop
         sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
         open={open}
@@ -107,7 +110,7 @@ const RegisterMentor = () => {
       )} */}
       <div className="contact register">
         <div className="container registerContainer">
-        <div className="register-title">Register Mentor</div>
+        <div className="register-title">Mentor Form</div>
           <div className="inputs">
             <form onSubmit={handleSubmit}>
               <label>NAME</label>
@@ -219,7 +222,7 @@ const RegisterMentor = () => {
                 </div>
               </div>
               <button type="submit" style={{ fontSize: "large" }}>
-                SUBMIT
+                Register as Mentor
               </button>
             </form>
             {submitSuccessMessage && (
@@ -232,6 +235,11 @@ const RegisterMentor = () => {
                 <p>{submitFailMessage}</p>
               </div>
             )}
+            <button type="submit" style={{ fontSize: "large" }} onClick={()=>{
+              setRegisterStatus(false);
+            }}>
+                Back To Profile Page
+              </button>
           </div>
         </div>
       </div>

@@ -3,10 +3,10 @@ import Home from "./Home/Home.js";
 import Mentor from "./Mentor/Mentor";
 import Feedback from "./Feedback/Feedback";
 import Contact from "./Contact/Contact";
-import Success from "./ContactStatus/Success/Success.js" ;
-import Failure from "./ContactStatus/Failure.js" ;
-import RegisterMentor from "./Register_Mentor/register" ;
-import './App.css'
+import Success from "./ContactStatus/Success/Success.js";
+import Failure from "./ContactStatus/Failure.js";
+import AuthForRegister from "./Register_Mentor/AuthForRegister.js";
+import "./App.css";
 import {
   BrowserRouter as Router,
   Route,
@@ -39,8 +39,6 @@ function App() {
     } // eslint-disable-next-line
   }, []);
 
-
- 
   return (
     <Router>
       <main>
@@ -69,7 +67,7 @@ function App() {
             <Feedback loginData={loginData} />
           </Route>
           <Route path="/mentor/register">
-            <RegisterMentor />
+            <AuthForRegister />
           </Route>
           <Redirect to="/" />
         </Switch>
