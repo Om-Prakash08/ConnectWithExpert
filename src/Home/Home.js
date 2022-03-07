@@ -1,5 +1,6 @@
-import React from "react";
+import React ,{useEffect} from "react";
 import "./Home.css";
+import axios from 'axios' ;
 import LoginForm from "./HomeRender";
 import { useHistory } from "react-router-dom";
 
@@ -24,6 +25,20 @@ function Home(props) {
     localStorage.setItem("Interest", JSON.stringify(Interest));
     history.push("/mentor");
   };
+
+  useEffect(()=>{
+    axios({
+      method: "get",
+      url: "/",
+      baseURL: process.env.REACT_APP_BACKEND_URL,
+    })
+    .then((res)=>{
+     console.log(res);
+    })
+    .catch((err)=>{
+      console.log(err) ;
+    })
+  },[]) ;
 
   return (
     <div className="Home">
