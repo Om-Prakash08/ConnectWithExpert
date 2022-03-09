@@ -53,11 +53,12 @@
 }
 
 @media screen and (max-width: 1000px) {
-  .cards .description {
+  /* .cards .description {
     min-height:75px ;
-  }
+  } */
   .cards button{
     margin-top:15px ;
   }
+
 }
 
