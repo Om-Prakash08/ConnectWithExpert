@@ -5,7 +5,12 @@ margin:0 ;
 
 
 .Home{
-  background-image: url("priscilla-unsplash.jpg");
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(3, 3, 226, 0.247),
+      rgba(1, 102, 1, 0.315)),url("priscilla-unsplash.jpg")
+  ;
+  /* background-image:url("priscilla-unsplash.jpg") ; */
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover ;
@@ -20,7 +25,9 @@ margin:0 ;
 .Home .description {
   padding-top:3.4rem ;
   padding-left:1rem ;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(0px);
+  border-radius: 20px !important;
+  height:340px !important;
 }
 .Home .description h2{
   color: #ffffff ;
@@ -34,15 +41,16 @@ margin:0 ;
   font-weight: 700;
   font-family: 'Flamenco', cursive;
   margin-top: 13px;
+  color: #06f72e;
 }
 
 .colorchange{
   animation: om 8s infinite;
 }
 @keyframes om {
-    0%{color: red }
-    33%{color: #bf55ec }
-    87%{color:white}
+    0%{color: white }
+    33%{color: red }
+    87%{color:#b62bf1}
 }
 .Home .description h1{
  color: #fff ;
@@ -147,6 +155,7 @@ form .icon {
     margin:3rem auto ;
     text-align: center ;
     backdrop-filter: blur(3px);
+    height:400px !important;
   }
   .Home .containt{
     margin-top:0 ;

@@ -1,9 +1,13 @@
 .cards {
-  background-color: #05e0c7 ;
+  /* background-color: #05e0c7 ; */
   border-radius: 5px;
   margin: 8%;
   min-width: 8rem;
-  background-image: url("https://www.transparenttextures.com/patterns/dark-exa.png");
+  background-image:linear-gradient(
+    to right bottom,
+    rgba(0, 0, 255, 1),
+    rgba(0, 128, 0, 1)
+  ), url("https://www.transparenttextures.com/patterns/dark-exa.png");
   box-shadow: 2px 2px 10px black;
   transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
 }
@@ -19,11 +23,13 @@
 .cards .title {
   text-align: center;
   padding:2%;
+  color: white;
 }
 .cards .description {
   text-align: center;
   padding:1%;
   min-height:50px ;
+  color: white;
 }
 .cards button {
   margin: 2% auto 5% auto;
